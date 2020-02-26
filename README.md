@@ -1,2 +1,3 @@
-# dotfiles
-My version of dotfiles
+# Dotfiles
+
+This is my mininal version of dotfiles
