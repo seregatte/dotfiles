@@ -1,0 +1,1 @@
+cp "$DOTFILES_HOME/init/vim/.vimrc" "$HOME/"

@@ -1,0 +1,1 @@
+cp "$DOTFILES_HOME/init/tmux/.tmux.conf" "$HOME/"
