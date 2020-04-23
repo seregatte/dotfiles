@@ -5,4 +5,4 @@ alias +vboxdowninterface='VBoxManage hostonlyif remove'
 alias +vboxrunning='VBoxManage list runningvms'
 alias +http='python -m SimpleHTTPServer'
 alias +lsjava='ls -la /Library/Java/JavaVirtualMachines/'
-alias timeout=gtimeout
+alias sublime="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"

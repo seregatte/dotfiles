@@ -20,8 +20,8 @@ export PATH="$PATH:/opt/sculpin"
 export PATH="$PATH:/opt/composer"
 
 export ZZOFF=""  # desligue funcoes indesejadas
-export ZZPATH="/opt/zz/funcoeszz/funcoeszz"  # script
-export ZZDIR="/opt/zz/funcoeszz/zz"
+export ZZPATH="/opt/zz/funcoeszz"  # script
+export ZZDIR=""    # pasta zz/
 
 if [ -f "$DOTFILES_SIMLYNK_HOME/.exports.sh" ];
 then

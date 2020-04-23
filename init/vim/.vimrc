@@ -1,5 +1,3 @@
-call pathogen#infect()
-
 let mapleader="\\"
 set mouse=a
 set backspace=2
