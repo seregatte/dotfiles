@@ -16,7 +16,6 @@ function +dockerHalt(){
 
 function +dockerRun() {
 	docker-machine start $CURRENT_DOCKER
-	+dockerNFS	
 }
 
 function +dockerSetVariables() {
@@ -38,3 +37,5 @@ function +dockerClean() {
 function +dockerMachine() {
 	[[ ! -z `docker-machine ls | grep Running | head -1 | awk '{ print $1 }'` ]] && eval $(docker-machine env `docker-machine ls | grep Running | head -1 | awk '{ print $1 }'`)
 }
+
+alias +dockerMachineStart='+dockerRun'
