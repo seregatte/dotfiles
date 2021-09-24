@@ -14,3 +14,4 @@ find "$DOTFILES_SIMLYNK_HOME" -type d -maxdepth 1 -mindepth 1 -exec ln -sf {} $H
 for f in "$DOTFILES_HOME"/init/*/main.sh; do source "$f"; done
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+test -e "${HOME}/.sdkman/bin/sdkman-init.sh" && source "${HOME}/.sdkman/bin/sdkman-init.sh"
