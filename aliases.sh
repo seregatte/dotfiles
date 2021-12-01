@@ -15,5 +15,9 @@ sfdx force:data:bulk:delete -s Atonit_Mktplace__Seller_Order__c  -w 100 -f <(sfd
 sfdx force:data:bulk:delete -s Atonit_Mktplace__Marketplace_Order__c  -w 100 -f <(sfdx force:data:soql:query -q 'SELECT Id FROM Atonit_Mktplace__Marketplace_Order__c' -r csv) && 
 sfdx force:data:bulk:delete -s Atonit_Mktplace__Seller__c -w 100 -f <(sfdx force:data:soql:query -q 'SELECT Id FROM Atonit_Mktplace__Seller__c' -r csv) && 
 sfdx force:data:bulk:delete -s Account -w 100 -f <(sfdx force:data:soql:query -q 'SELECT Id FROM Account' -r csv)"
+alias +sfdxClearProducts="sfdx force:data:bulk:delete -s Atonit_Mktplace__Category__c  -w 100 -f <(sfdx force:data:soql:query -q 'SELECT Id FROM Atonit_Mktplace__Category__c' -r csv) && 
+sfdx force:data:bulk:delete -s Atonit_Mktplace__Product__c  -w 100 -f <(sfdx force:data:soql:query -q 'SELECT Id FROM Atonit_Mktplace__Product__c' -r csv) && 
+sfdx force:data:bulk:delete -s Atonit_Mktplace__Product_Variant__c -w 100 -f <(sfdx force:data:soql:query -q 'SELECT Id FROM Atonit_Mktplace__Product_Variant__c' -r csv) && 
+sfdx force:data:bulk:delete -s Atonit_Mktplace__ProductMatchSuggestion__c -w 100 -f <(sfdx force:data:soql:query -q 'SELECT Id FROM Atonit_Mktplace__ProductMatchSuggestion__c' -r csv)"
 pbcopy 2> /dev/null || alias pbcopy="clip.exe"
 pbpaste 2> /dev/null || alias pbpaste="powershell.exe -command 'Get-Clipboard'"
