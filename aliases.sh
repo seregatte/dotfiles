@@ -19,5 +19,6 @@ alias +sfdxClearProducts="sfdx force:data:bulk:delete -s Atonit_Mktplace__Catego
 sfdx force:data:bulk:delete -s Atonit_Mktplace__Product__c  -w 100 -f <(sfdx force:data:soql:query -q 'SELECT Id FROM Atonit_Mktplace__Product__c' -r csv) && 
 sfdx force:data:bulk:delete -s Atonit_Mktplace__Product_Variant__c -w 100 -f <(sfdx force:data:soql:query -q 'SELECT Id FROM Atonit_Mktplace__Product_Variant__c' -r csv) && 
 sfdx force:data:bulk:delete -s Atonit_Mktplace__ProductMatchSuggestion__c -w 100 -f <(sfdx force:data:soql:query -q 'SELECT Id FROM Atonit_Mktplace__ProductMatchSuggestion__c' -r csv)"
-echo $HOME | pbcopy 2> /dev/null || alias pbcopy="clip.exe"
+echo $HOME | pbcopy 2> /dev/null &> /dev/null || alias pbcopy="clip.exe"
 pbpaste 2> /dev/null || alias pbpaste="powershell.exe -command 'Get-Clipboard'"
+sfdx --version &>/dev/null 2>/dev/null && source <(sfdx autocomplete:script bash)
